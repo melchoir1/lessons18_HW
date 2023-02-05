@@ -7,17 +7,17 @@
 # review_service = ReviewService(dao=review_dao)
 
 
-from .dao.movie_dao import MovieDAO
-from .dao.genre_dao import GenreDAO
-from .dao.director_dao import DirectorDAO
+from dao.movie_dao import MovieDAO
+from dao.genre_dao import GenreDAO
+from dao.director_dao import DirectorDAO
 
-from .service.movie_service import MovieService
-from .service.genre_service import GenreService
-from .service.director_service import DirectorService
+from service.movie_service import MovieService
+from service.genre_service import GenreService
+from service.director_service import DirectorService
 
-from .dao.model.movie import MovieSchema
-from .dao.model.genre import GenreSchema
-from .dao.model.director import DirectorSchema
+from dao.model.movie import MovieSchema
+from dao.model.genre import GenreSchema
+from dao.model.director import DirectorSchema
 
 from setup_db import db
 
