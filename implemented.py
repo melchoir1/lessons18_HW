@@ -22,19 +22,19 @@ from dao.model.director import DirectorSchema
 from setup_db import db
 
 director_dao = DirectorDAO(db.session)
-director_service = DirectorService(db.session)
+director_service = DirectorService(director_dao)
 
 director_schema = DirectorSchema()
 directors_schema = DirectorSchema(many=True)
 
 genre_dao = GenreDAO(db.session)
-genre_service = GenreService(db.session)
+genre_service = GenreService(genre_dao)
 
 genre_schema = GenreSchema()
 genres_schema = GenreSchema(many=True)
 
 movie_dao = MovieDAO(db.session)
-movie_service = MovieService(db.session)
+movie_service = MovieService(movie_dao)
 
 movie_schema = MovieSchema()
 movies_schema = MovieSchema(many=True)

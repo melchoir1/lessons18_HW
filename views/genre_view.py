@@ -15,5 +15,5 @@ class GenresView(Resource):
 class GenreView(Resource):
 
     def get(self, gid):
-        genre_id_view = genre_service.genre_id()
+        genre_id_view = genre_service.genre_id(gid)
         return genre_schema.dump(genre_id_view)

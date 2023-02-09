@@ -9,5 +9,5 @@ class DirectorDAO:
         return all_director
 # Получить режиссеров по id
     def get_director_id(self, did):
-        director_id = self.session.query(Director).all(did)
+        director_id = self.session.query(did)
         return director_id

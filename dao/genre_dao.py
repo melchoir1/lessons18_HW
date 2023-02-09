@@ -9,5 +9,5 @@ class GenreDAO:
         return all_genre
 # Получить жанры по id
     def get_genre_id(self, gid):
-        genre_id = self.session.query(Genre).all(gid)
+        genre_id = self.session.query(gid)
         return genre_id

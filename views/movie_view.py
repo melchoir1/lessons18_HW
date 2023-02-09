@@ -14,7 +14,7 @@ class MoviesView(Resource):
             'genre_id' : request.args.get('genre_id'),
             'year' : request.args.get('year')
             }
-        all_movie = movie_service.filters(data)
+        all_movie = movie_service.filter_film(data)
         return movies_schema.dump(all_movie), 200
 
     def post(self):
